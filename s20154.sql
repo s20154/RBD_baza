@@ -1,7 +1,7 @@
 use s20154;
 
 set foreign_key_checks=0;
-drop table if exists aukcje, oferty, uzytkownicy, adres, statusy, kategorie_statusow, przedmiot, kategorie_przedmiotow
+drop table if exists aukcje, oferty, uzytkownicy, adres, statusy, kategorie_statusow, przedmiot, kategorie_przedmiotow;
 set foreign_key_checks=1;
 
 create table aukcje (
