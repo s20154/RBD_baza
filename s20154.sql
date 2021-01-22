@@ -18,7 +18,10 @@ create table aukcje (
 );
 insert into aukcje(data_stworzenia, data_koncowa, id_przedmiotu, id_statusu, id_oferty) values
 ("20120618 10:34:09 AM","20130618 10:34:09 AM", 1, 3, 1),
-("20120619 9:34:09 AM","20120621 9:35:09 AM", 2, 3, 2);
+("20120618 10:34:09 AM","20130618 10:34:09 AM", 2, 3, 2),
+("20120618 10:34:09 AM","20130618 10:34:09 AM", 3, 4, 3),
+("20120618 10:34:09 AM","20130618 10:34:09 AM", 4, 4, 4),
+("20120619 9:34:09 AM","20120621 9:35:09 AM", 5, 4, 5);
 
 create table oferty (
     id int not null auto_increment,
@@ -28,7 +31,28 @@ create table oferty (
 );
 insert into oferty(wysokosc_oferty, data_stworzenia) values
 ("201", "20120618 11:34:09 AM"),
-("2010", "20120620 8:34:09 AM");
+("123", "20120618 11:33:09 AM"),
+("443", "20120618 11:31:09 AM"),
+("454", "20120618 12:24:09 AM"),
+("567", "20120620 11:14:09 AM"),
+
+("888", "20120622 11:34:09 PM"),
+("999", "20120621 10:14:09 PM"),
+("23", "20120620 10:24:09 PM"),
+("787", "20120619 10:38:09 PM"),
+("12", "20120619 11:50:09 PM"),
+
+("1", "20120818 4:34:09 AM"),
+("34", "20120818 5:34:09 AM"),
+("3", "20120818 6:34:09 AM"),
+("45", "20120818 7:34:09 AM"),
+("56", "20120818 8:34:09 AM"),
+
+("67", "20120718 2:34:09 AM"),
+("78", "20120718 3:34:09 AM"),
+("99", "20120718 4:34:09 AM"),
+("675", "20120718 15:34:09 AM"),
+("10000", "20120718 12:34:09 AM");
 
 create table uzytkownicy (
     id int not null auto_increment,
@@ -45,7 +69,11 @@ create table uzytkownicy (
     foreign key (id_adresu) references adres(id)
 );
 insert into uzytkownicy(email, imie, nazwisko, haslo, id_aukcji, id_ofert, id_adresu) values
-("damian@kijanczuk.com","damian","kijanczuk","krokodylek123", 1, 2, 1);
+("damian@kijanczuk.com","damian","kijanczuk","krokodylek123", 1, 5, 1),
+("agniecham@op.pl","stanislaw","szeroki","krokodylek132", 2, 4, 3)
+("xxsniperz@gmail.com","edmund","wiertara","krokodylek132", 3, 3, 2)
+("czesiek1251@wp.pl","czesiek","hydraulik","krokodylek123", 4, 2, 4)
+("nikodemamian@kijanczuk.com","nikodem","kijanczuk","krokodylek112323", 5, 1, 7)
 
 create table adres (
     id int not null auto_increment,
