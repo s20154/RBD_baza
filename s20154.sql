@@ -9,9 +9,9 @@ create table aukcje (
     data_stworzenia datetime not null,
     data_koncowa datetime not null,
     primary key (id),
-    id_przedmiotu int not null,
-    id_statusu int not null,
-    id_ofert int not null,
+    id_przedmiotu int,
+    id_statusu in,
+    id_ofert int,
     foreign key (id_przedmiotu) references przedmiot(id),
     foreign key (id_statusu) references statusy(id),
     foreign key (id_ofert) references oferty(id)
